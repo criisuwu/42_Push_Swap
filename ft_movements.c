@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:04:59 by chomobon          #+#    #+#             */
-/*   Updated: 2025/01/31 14:46:02 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/01/31 18:10:32 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,15 +42,14 @@ void push(t_stack **src, t_stack **dest, char stackdest)
     (*dest) = aux;
     if (stackdest == 'a')
         ft_printf("pa\n");
-    else
+    if (stackdest == 'b')
         ft_printf("pb\n");
 }
 
 // * Con esta orden lo que vamos a hacer es desplazar los elementos hacia
-// * arriba o hacia abajo, en caso de que se rotara hacia arriba lo que hace
-// * es ra y rota todos los elementos hacia arriba y el primer elemento pasa a
-// * ser el ultimo elemento. En caso de que fuera al reves podemos ver que 
-// * se rotan todos hacia abajo y el ultimo pasa a ser el primero (rb).
+// * arriba, rota todos los elementos hacia arriba y el primer elemento pasa a
+// * ser el ultimo elemento tanto en ra como en rb. Solo lo hace en uno de los
+// * stacks, osea en a o en b.
 void rotate(t_stack **stack, char option)
 {
     t_stack *last;
@@ -69,4 +68,12 @@ void rotate(t_stack **stack, char option)
         else
             ft_printf("rb\n");
     }
+}
+
+// * Con esta orden lo que hacemos es rotar a y b a mismo tiempo
+void rr(t_stack **a, t_stack **b)
+{
+    rotate(a, 'x');
+    rotate(b, 'x');
+    ft_printf("rr\n");
 }
