@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:34:12 by chomobon          #+#    #+#             */
-/*   Updated: 2025/01/29 17:00:21 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/03/05 18:43:43 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <limits.h>
 #include <unistd.h>
 #include <stdlib.h>
-#include "libft/libft.h"
 #include "printf/ft_printf.h"
 
 typedef struct s_stack
