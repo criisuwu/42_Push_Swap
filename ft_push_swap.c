@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:28:49 by chomobon          #+#    #+#             */
-/*   Updated: 2025/01/31 17:05:43 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/02/19 14:04:59 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ int main(int argc, char **argv)
 
     a = NULL;
     b = NULL;
-    if (argc > 1)
-    {
-        if (argc < 2)
-            argerr();
-    }
+    size = 0;
+    if (argc < 2)
+        print_err();
+    a = 
 }
