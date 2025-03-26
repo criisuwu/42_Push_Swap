@@ -6,18 +6,20 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:55:57 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/26 16:27:48 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/03/26 17:14:22 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// * Imprime un error y sale por la salida correspondiente
 void print_err(void)
 {
     ft_putendl_fd("Error", 2);
     exit(EXIT_FAILURE);
 }
 
+// * Libera el stack (un stack individual)
 void freestack(t_stack **s)
 {
     t_stack *tmp;
@@ -33,12 +35,14 @@ void freestack(t_stack **s)
     }
 }
 
+// * Libera los dos stacks
 void free_both_stacks(t_stack **a, t_stack **b)
 {
     freestack(a);
     freestack(b);
 }
 
+// * Liberamos una string
 void freestr(char **lst)
 {
     char *n_lst;

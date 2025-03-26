@@ -6,12 +6,14 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 16:29:39 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/26 16:49:18 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/03/26 17:12:34 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
+// * Verifico si el separador es cualquiera de los carcteres similares al espacio
+// * como el salto de linea. el tabulador, el retorno de carro...
 static int is_space(char c)
 {
     if  (c == ' ' || c == '\t' || c == '\n' || c == '\f'
@@ -20,6 +22,8 @@ static int is_space(char c)
     return (0);
 }
 
+// * Es un atoi pero modificado para que devuleva los errores en caso de 
+// * fallo
 int ft_atoi(const char *str)
 {
     int mod;
@@ -49,6 +53,9 @@ int ft_atoi(const char *str)
     return (mod * i);
 }
 
+// * Es la funcion que procesa los argumentos recibidos al ejecutar 
+// * el codigo, en caso de que falle libera las pilas y devuelve
+// * un error y null
 t_stack *ft_process(int argc, char **argv, int *size)
 {
     t_stack *a;
