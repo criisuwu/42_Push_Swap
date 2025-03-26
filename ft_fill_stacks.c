@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 18:37:56 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/05 19:21:02 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/03/26 16:14:52 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,5 +50,3 @@ void add_back(t_stack **lst, t_stack *new)
     else
         *lst = new;
 }
-
-jvjfkvfvgjkbef

@@ -1,0 +1,79 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_parse_args.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/03/26 16:29:39 by chomobon          #+#    #+#             */
+/*   Updated: 2025/03/26 16:49:18 by chomobon         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "push_swap.h"
+
+static int is_space(char c)
+{
+    if  (c == ' ' || c == '\t' || c == '\n' || c == '\f'
+            || c == '\v' || c == '\r')
+            return (1);
+    return (0);
+}
+
+int ft_atoi(const char *str)
+{
+    int mod;
+    long long int i;
+
+    i = 0;
+    mod = 1;
+    while (is_space(*str))
+        str++;
+    if (*str == '-' || *str == '+')
+    {
+        if(*str == '-')
+            mod = -1;
+        str++;
+    }
+    if (!*str)
+        print_err();
+    while (*str)
+    {
+        if (!ft_isdigit(*str))
+            print_err();
+        i = i * 10 + (*str - 48);
+        str++;
+    }
+    if ((mod * i) > 2147483647 || (mod * i) < -2147483648)
+        print_err();
+    return (mod * i);
+}
+
+t_stack *ft_process(int argc, char **argv, int *size)
+{
+    t_stack *a;
+    int i;
+    int j;
+    char **tmp;
+
+    i = 1;
+    a = NULL;
+    while(argc > i)
+    {
+        if(argv[i][0] == '\0')
+            return (freestack(&a), print_err(), NULL);
+        j = 0;
+        tmp = ft_split(argv[i], ' ');
+        if (!tmp)
+            return (freestack(&a), print_err(), NULL);
+        while (tmp[j])
+        {
+            add_back(&a, stack_new(ft_atoi(tmp[j++])));
+            *size  += 1;
+        }
+        freestr(tmp);
+        free(tmp);
+        i++;
+    }
+    return(a);
+}
