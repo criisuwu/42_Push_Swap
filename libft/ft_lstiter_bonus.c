@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:34:12 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/26 17:48:27 by chomobon         ###   ########.fr       */
+/*   Created: 2024/04/22 18:15:44 by chomobon          #+#    #+#             */
+/*   Updated: 2024/04/26 11:59:31 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUSH_SWAP_H
-# define FT_PUSH_SWAP_H
+#include "libft.h"
 
-#include <limits.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "libft/printf/ft_printf.h"
-
-typedef struct s_stack
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
-    int value;
-    int index;
-    int pos;
-    int target_pos;
-    struct s_stack *next;
-} t_stack;
-
-#endif
+	if (!lst || !f)
+		return ;
+	while (lst != NULL)
+	{
+		f(lst->content);
+		lst = lst->next;
+	}
+}

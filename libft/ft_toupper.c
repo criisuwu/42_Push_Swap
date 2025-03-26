@@ -1,30 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:34:12 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/26 17:48:27 by chomobon         ###   ########.fr       */
+/*   Created: 2023/09/14 18:09:39 by chomobon          #+#    #+#             */
+/*   Updated: 2024/04/22 16:07:23 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUSH_SWAP_H
-# define FT_PUSH_SWAP_H
+#include <stdio.h>
 
-#include <limits.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include "libft/printf/ft_printf.h"
-
-typedef struct s_stack
+int	ft_toupper(int c)
 {
-    int value;
-    int index;
-    int pos;
-    int target_pos;
-    struct s_stack *next;
-} t_stack;
+	if (c >= 97 && c <= 122)
+	{
+		return (c - 32);
+	}
+	return (c);
+}
 
-#endif
+/*int	main(void)
+{
+	char c[] = "pepe ever";
+	printf("%s\n", ft_toupper(c));
+	return (0);
+	}*/

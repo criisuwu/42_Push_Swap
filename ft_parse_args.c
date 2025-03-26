@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 16:29:39 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/26 17:12:34 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/03/26 17:46:10 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ static int is_space(char c)
 
 // * Es un atoi pero modificado para que devuleva los errores en caso de 
 // * fallo
-int ft_atoi(const char *str)
+int ft_n_atoi(const char *str)
 {
     int mod;
     long long int i;

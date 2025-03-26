@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.h                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:34:12 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/26 17:48:27 by chomobon         ###   ########.fr       */
+/*   Created: 2023/09/29 15:57:23 by chomobon          #+#    #+#             */
+/*   Updated: 2024/04/22 15:13:54 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PUSH_SWAP_H
-# define FT_PUSH_SWAP_H
-
-#include <limits.h>
+#include "libft.h"
 #include <unistd.h>
-#include <stdlib.h>
-#include "libft/printf/ft_printf.h"
+#include <stdio.h>
 
-typedef struct s_stack
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-    int value;
-    int index;
-    int pos;
-    int target_pos;
-    struct s_stack *next;
-} t_stack;
+	unsigned long	i;
+	unsigned long	l;
+	char			*str;
 
-#endif
+	l = ft_strlen(s);
+	str = (char *) malloc(sizeof(char) * (l + 1));
+	if (str == 0)
+		return (str);
+	i = 0;
+	while (i < l)
+	{
+		str[i] = (*f)(i, s[i]);
+		++i;
+	}
+	str[i] = 0;
+	return (str);
+}
