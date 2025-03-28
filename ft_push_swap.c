@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:28:49 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/26 17:41:46 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/03/26 19:26:53 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ int main(int argc, char **argv)
         freestack(&a);
         print_err();
     }
-    if (!check_sorted(a))
+    // if (!check_sorted(a))
         //Aqui para ordenarlo
 }
