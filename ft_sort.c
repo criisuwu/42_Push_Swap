@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:50:33 by chomobon          #+#    #+#             */
-/*   Updated: 2025/03/28 16:30:06 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/02 16:24:11 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ int is_sorted(t_stack *a)
 
 void sort_satck(t_stack *a, t_stack *b, int size)
 {
-    assign_index(*a, size);
-    if (!is_sorted(*a))
+    assign_index(a, size);
+    if (!is_sorted(a))
     {
         if (size == 2)
             sa(a);
