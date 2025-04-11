@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:28:49 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 18:08:18 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/11 19:17:14 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,14 @@ int	main(int argc, char **argv)
 	a = ft_process(argc, argv, &size);
 	if (!a || check_dup(a))
 	{
+		printf ("Estoy en el if del check dup\n");
 		freestack(&a);
 		ft_print_err();
 	}
 	if (!check_sorted(a))
+	{
 		sort_stack(&a, &b, size);
+	}
 	free_both_stacks(&a, &b);
 	exit(EXIT_SUCCESS);
 }

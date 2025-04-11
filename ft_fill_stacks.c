@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 18:37:56 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 18:23:01 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/11 19:34:33 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ t_stack	*new_stack(int content)
 	if (!new)
 		ft_print_err();
 	new->value = content;
+	new->index = 0;
 	new->next = NULL;
 	return (new);
 }

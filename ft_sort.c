@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:50:33 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 18:14:21 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/11 19:42:29 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,20 @@ static t_stack	*get_min_node(t_stack *a)
 
 	aux = a;
 	while (aux && aux->index != 0)
-		aux = aux->next;
-	small_node = aux;
-	while (aux)
 	{
-		if (aux->value > small_node->value && aux->index == 0)
-			small_node = 0;
+		printf ("%d\n", aux->index);
 		aux = aux->next;
 	}
+	small_node = aux;
+	printf ("Indice %d\n", small_node->index);
+	while (a)
+	{
+		printf ("in\n");
+		if (aux->value < small_node->value && aux->index == 0)
+			small_node = 0;
+		a = a->next;
+	}
+	printf ("final\n");
 	return (small_node);
 }
 
@@ -37,7 +43,7 @@ void	assign_index(t_stack *a, int size)
 	int	aux_ind;
 
 	aux_ind = 1;
-	while (aux_ind < size)
+	while (aux_ind <= size)
 	{
 		get_min_node(a)->index = aux_ind;
 		aux_ind++;
