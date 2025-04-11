@@ -6,13 +6,13 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:50:33 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 19:42:29 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/11 19:51:41 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// * 
+// * a
 static t_stack	*get_min_node(t_stack *a)
 {
 	t_stack	*small_node;
