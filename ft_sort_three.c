@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap.c                                     :+:      :+:    :+:   */
+/*   ft_sort_three.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/29 16:28:49 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 18:08:18 by chomobon         ###   ########.fr       */
+/*   Created: 2025/04/11 13:50:39 by chomobon          #+#    #+#             */
+/*   Updated: 2025/04/11 18:13:04 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-// * Este archivo solo incluye el main para el push swap
-int	main(int argc, char **argv)
+void	sort_three(t_stack **a)
 {
-	int		size;
-	t_stack	*a;
-	t_stack	*b;
+	t_stack	*first;
+	t_stack	*second;
+	t_stack	*third;
 
-	a = NULL;
-	b = NULL;
-	size = 0;
-	if (argc < 2)
-		ft_print_err();
-	a = ft_process(argc, argv, &size);
-	if (!a || check_dup(a))
-	{
-		freestack(&a);
-		ft_print_err();
-	}
-	if (!check_sorted(a))
-		sort_stack(&a, &b, size);
-	free_both_stacks(&a, &b);
-	exit(EXIT_SUCCESS);
+	first = *a;
+	second = (*a)->next;
+	third = (*a)->next->next;
+	if (first->index > second->index && first->index > third->index)
+		rotate(a, 'a');
+	else if (first->index < second->index && second->index > third->index)
+		r_rotate(a, 'a');
+	first = *a;
+	second = (*a)->next;
+	if (first->index > second->index)
+		sa(a);
 }
