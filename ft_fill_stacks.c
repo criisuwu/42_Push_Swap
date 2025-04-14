@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 18:37:56 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 19:34:33 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/14 15:25:58 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,10 @@ t_stack	*new_stack(int content)
 {
 	t_stack	*new;
 
-	new = (t_stack *) malloc(sizeof(t_stack));
+	new = (t_stack *) ft_calloc(sizeof(t_stack), 1);
 	if (!new)
 		ft_print_err();
 	new->value = content;
-	new->index = 0;
 	new->next = NULL;
 	return (new);
 }
