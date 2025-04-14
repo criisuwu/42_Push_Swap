@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 16:29:39 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 19:18:08 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/14 16:06:35 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ t_stack	*ft_process(int argc, char **argv, int *size)
 			return (freestack(&a), ft_print_err(), NULL);
 		while (tmp[j])
 		{
-			add_back(&a, new_stack(ft_atoi(tmp[j++])));
+			add_back(&a, new_stack(ft_n_atoi(tmp[j++])));
 			*size += 1;
 		}
 		freestr(tmp);

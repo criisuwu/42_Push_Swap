@@ -1,2 +1,4 @@
 .vscode
 *.o
+checker_linux
+.gitignore
