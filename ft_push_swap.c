@@ -6,22 +6,11 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:28:49 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/14 17:32:47 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:08:51 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
-/* void	print_stack(t_stack *stack, char *name)
-{
-	printf("%s: ", name);
-	while (stack)
-	{
-		printf("%d ", stack->value);
-		stack = stack->next;
-	}
-	printf("\n");
-} */
 
 // * Este archivo solo incluye el main para el push swap
 int	main(int argc, char **argv)
@@ -43,8 +32,7 @@ int	main(int argc, char **argv)
 	}
 	if (!check_sorted(a))
 	{
-		sort_stack(&a, &b, size);
-		// print_stack(a, "A");
+		sort_stack(&a, &b, size)
 	}
 	free_both_stacks(&a, &b);
 	exit(EXIT_SUCCESS);

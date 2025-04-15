@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 14:58:02 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/14 15:42:08 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:04:19 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	push_and_decrease(t_stack **a, t_stack **b, int *c_size)
 {
-	push(a, b, 'b');
+	push(a, b, 'b');;
 	(*c_size)--;
 }
 
@@ -30,12 +30,16 @@ static void	push_all_exc_three(t_stack **a, t_stack**b, int sz)
 		if ((*a)->index < half)
 			push_and_decrease(a, b, &c_size);
 		else
+		{
 			rotate(a, 'a');
+		}
 	}
 	while (c_size > 3)
 	{
 		if ((*a)->index == sz || (*a)->index == sz - 1 || (*a)->index == sz - 2)
+		{
 			rotate(a, 'a');
+		}
 		else
 			push_and_decrease(a, b, &c_size);
 	}

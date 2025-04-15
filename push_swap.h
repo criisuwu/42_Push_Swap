@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:34:12 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 18:21:09 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 13:39:53 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,5 +58,6 @@ int		abs_val(int num);
 void	assign_index(t_stack *a, int size);
 int		is_sorted(t_stack *a);
 int		ft_n_atoi(const char *str);
+void	print_stack(t_stack *stack);
 
 #endif

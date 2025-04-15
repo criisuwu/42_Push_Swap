@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:03:14 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/11 17:58:41 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:03:33 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 // * Con esta funcion ejecutamos los movimientos que son de las dos pilas
 static void	ex_double_mvs(t_stack **a, t_stack **b, int *mvsa, int *mvsb)
 {
-	if ((*mvsa) > 0 && (*mvsb > 0))
+	if ((*mvsa) > 0 && (*mvsb) > 0)
 	{
 		rr(a, b);
 		(*mvsa)--;
 		(*mvsb)--;
 	}
-	else if ((*mvsa < 0) && (*mvsb < 0))
+	else if ((*mvsa) < 0 && (*mvsb) < 0)
 	{
 		rrr(a, b);
 		(*mvsa)++;
@@ -65,6 +65,7 @@ void	ex_opt_mvs(t_stack **a, t_stack **b, int *sz_a, int *sz_b)
 	t_stack	*b_aux;
 
 	b_aux = *b;
+	best_node = *b;
 	while (b_aux)
 	{
 		if (abs_val(best_node->cost_a) + abs_val(best_node->cost_b)
@@ -90,7 +91,7 @@ static int	calc_num_rot(t_stack **a, int sz_a)
 	{
 		if (a_aux->index == 1)
 		{
-			if ((a_aux->pos + 1) <= sz_a / 2 +1)
+			if ((a_aux->pos + 1) <= (sz_a / 2) +1)
 				return (a_aux->pos);
 			else
 				return (a_aux->pos - sz_a);

@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 17:04:59 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/14 15:41:19 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:06:17 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ void	rotate(t_stack **stack, char option)
 		aux ->next = NULL;
 		if (option == 'a')
 			write(1, "ra\n", 3);
-		else
+		else if (option == 'b')
 			write(1, "rb\n", 3);
 	}
 }
