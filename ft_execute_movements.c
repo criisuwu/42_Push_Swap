@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/26 17:03:14 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/15 15:03:33 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:14:57 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ static int	calc_num_rot(t_stack **a, int sz_a)
 	{
 		if (a_aux->index == 1)
 		{
-			if ((a_aux->pos + 1) <= (sz_a / 2) +1)
+			if ((a_aux->pos + 1) <= (sz_a / 2) + 1)
 				return (a_aux->pos);
 			else
 				return (a_aux->pos - sz_a);

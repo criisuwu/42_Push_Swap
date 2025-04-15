@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 14:58:02 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/15 15:04:19 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:16:08 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	push_and_decrease(t_stack **a, t_stack **b, int *c_size)
 {
-	push(a, b, 'b');;
+	push(a, b, 'b');
 	(*c_size)--;
 }
 

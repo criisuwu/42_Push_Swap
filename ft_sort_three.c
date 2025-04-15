@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/11 13:50:39 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/15 15:04:28 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:15:52 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	sort_three(t_stack **a)
 	if (first->index > second->index && first->index > third->index)
 	{
 		rotate(a, 'a');
-
 	}
 	else if (first->index < second->index && second->index > third->index)
 		r_rotate(a, 'a');
