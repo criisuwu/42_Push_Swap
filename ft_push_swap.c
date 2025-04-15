@@ -6,7 +6,7 @@
 /*   By: chomobon <chomobon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/29 16:28:49 by chomobon          #+#    #+#             */
-/*   Updated: 2025/04/15 15:08:51 by chomobon         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:11:49 by chomobon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int argc, char **argv)
 	}
 	if (!check_sorted(a))
 	{
-		sort_stack(&a, &b, size)
+		sort_stack(&a, &b, size);
 	}
 	free_both_stacks(&a, &b);
 	exit(EXIT_SUCCESS);
